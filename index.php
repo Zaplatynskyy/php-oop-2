@@ -9,8 +9,20 @@ Gestite eventuali eccezioni che si possono verificare (es: carta di credito scad
 <?php
 include_once __DIR__ . '/classes/Shop.php';
 include_once __DIR__ . '/classes/User.php';
+include_once __DIR__ . '/classes/Book.php';
+include_once __DIR__ . '/classes/Distillate.php';
 
 
+$pragmatic_programmer = new Book('The Pragmatic Programmer','Libri', '29.00', 'A.Hunt and D.Thomas', 2018, 238);
+$talisker_sky = new Distillate('Talisker Sky', 'Distillato', 52.26, 'Scotch Whisky', 'Talisker', 45.8);
+
+// var_dump($pragmatic_programmer);
+// echo $pragmatic_programmer->getName();
+// echo $pragmatic_programmer->getAuthor();
+
+// var_dump($talisker_sky);
+// echo $talisker_sky-> getName();
+// echo $talisker_sky-> getType();
 
 
 ?>
