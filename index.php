@@ -9,13 +9,14 @@ Gestite eventuali eccezioni che si possono verificare (es: carta di credito scad
 <?php
 include_once __DIR__ . '/classes/Shop.php';
 include_once __DIR__ . '/classes/User.php';
+include_once './classes/UserPremium.php';
 include_once __DIR__ . '/classes/CreditCard.php';
 include_once __DIR__ . '/classes/Book.php';
 include_once __DIR__ . '/classes/Distillate.php';
 
 
-$pragmatic_programmer = new Book('The Pragmatic Programmer','Libri', '29.00', 'A.Hunt and D.Thomas', 2018, 238);
-$talisker_sky = new Distillate('Talisker Sky', 'Distillato', 52.26, 'Scotch Whisky', 'Talisker', 45.8);
+// $pragmatic_programmer = new Book('The Pragmatic Programmer','Libri', '29.00', 'A.Hunt and D.Thomas', 2018, 238);
+// $talisker_sky = new Distillate('Talisker Sky', 'Distillato', 52.26, 'Scotch Whisky', 'Talisker', 45.8);
 
 // var_dump($pragmatic_programmer);
 // echo $pragmatic_programmer->getName();
@@ -24,6 +25,7 @@ $talisker_sky = new Distillate('Talisker Sky', 'Distillato', 52.26, 'Scotch Whis
 // var_dump($talisker_sky);
 // echo $talisker_sky-> getName();
 // echo $talisker_sky-> getType();
+
 
 // $utente_x = new User( 'Pippo', 'Rossi', new CreditCard('Pippo Rossi', '5255634480891234', '05/22') );
 
@@ -34,4 +36,16 @@ $talisker_sky = new Distillate('Talisker Sky', 'Distillato', 52.26, 'Scotch Whis
 
 // var_dump($utente_x);
 
+// $utente_premium = new UserPremium('Pippo', 'Rossi', new CreditCard('Pippo Rossi', '0000123452429989', '08/22'), 200);
+
+// var_dump($utente_premium);
+
+// echo $utente_premium->getDiscount();
+
+// $utente_premium->setPremiumPoints(600);
+// echo $utente_premium->getDiscount();
+
+// $utente_premium->setPremiumPoints(1000);
+// // var_dump($utente_premium);
+// echo $utente_premium->getDiscount();
 ?>
