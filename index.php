@@ -9,6 +9,7 @@ Gestite eventuali eccezioni che si possono verificare (es: carta di credito scad
 <?php
 include_once __DIR__ . '/classes/Shop.php';
 include_once __DIR__ . '/classes/User.php';
+include_once __DIR__ . '/classes/CreditCard.php';
 include_once __DIR__ . '/classes/Book.php';
 include_once __DIR__ . '/classes/Distillate.php';
 
@@ -24,5 +25,13 @@ $talisker_sky = new Distillate('Talisker Sky', 'Distillato', 52.26, 'Scotch Whis
 // echo $talisker_sky-> getName();
 // echo $talisker_sky-> getType();
 
+// $utente_x = new User( 'Pippo', 'Rossi', new CreditCard('Pippo Rossi', '5255634480891234', '05/22') );
+
+// var_dump($utente_x);
+
+// $newCard =  new CreditCard('Pippo Rossi', '0000123452429989', '08/24');
+// $utente_x->setCreditCard($newCard);
+
+// var_dump($utente_x);
 
 ?>
