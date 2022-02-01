@@ -15,8 +15,12 @@ include_once __DIR__ . '/classes/Book.php';
 include_once __DIR__ . '/classes/Distillate.php';
 
 
-// $pragmatic_programmer = new Book('The Pragmatic Programmer','Libri', '29.00', 'A.Hunt and D.Thomas', 2018, 238);
-// $talisker_sky = new Distillate('Talisker Sky', 'Distillato', 52.26, 'Scotch Whisky', 'Talisker', 45.8);
+/*--------------------------------------
+    PROVA PRODOTTI SHOP
+--------------------------------------*/
+
+$pragmatic_programmer = new Book('The Pragmatic Programmer','Libri', '29.00', 'A.Hunt and D.Thomas', 2018, 238);
+$talisker_sky = new Distillate('Talisker Sky', 'Distillato', 52.26, 'Scotch Whisky', 'Talisker', 45.8);
 
 // var_dump($pragmatic_programmer);
 // echo $pragmatic_programmer->getName();
@@ -27,25 +31,40 @@ include_once __DIR__ . '/classes/Distillate.php';
 // echo $talisker_sky-> getType();
 
 
-// $utente_x = new User( 'Pippo', 'Rossi', new CreditCard('Pippo Rossi', '5255634480891234', '05/22') );
+/*--------------------------------------
+    PROVA UTENTE,UTENTE PREMIUM E CARTE DI CREDITO
+--------------------------------------*/
+
+$utente_x = new User( 'Pippo', 'Rossi', new CreditCard('Pippo Rossi', '5255634480891234', '05/2022') );
 
 // var_dump($utente_x);
 
-// $newCard =  new CreditCard('Pippo Rossi', '0000123452429989', '08/24');
-// $utente_x->setCreditCard($newCard);
+$newCard =  new CreditCard('Pippo Rossi', '0000123452429989', '08/2024');
+$utente_x->setCreditCard($newCard);
 
 // var_dump($utente_x);
 
-// $utente_premium = new UserPremium('Pippo', 'Rossi', new CreditCard('Pippo Rossi', '0000123452429989', '08/22'), 200);
+$utente_premium = new UserPremium('Pippo', 'Rossi', new CreditCard('Pippo Rossi', '0000123452429989', '08/2022'), 200);
 
 // var_dump($utente_premium);
 
 // echo $utente_premium->getDiscount();
 
-// $utente_premium->setPremiumPoints(600);
+$utente_premium->setPremiumPoints(600);
 // echo $utente_premium->getDiscount();
 
-// $utente_premium->setPremiumPoints(1000);
+$utente_premium->setPremiumPoints(1000);
 // // var_dump($utente_premium);
 // echo $utente_premium->getDiscount();
+
+/*--------------------------------------
+    PROVA ERRORE CARTA DI CREDITO SCADUTA
+--------------------------------------*/
+
+try {
+    $creditCard = new CreditCard('Pippo Rossi', '000000000000', '01/2022');
+} catch (Exception $e) {
+    echo $e->getMessage();
+}
+
 ?>

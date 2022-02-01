@@ -15,6 +15,10 @@ class CreditCard {
         $this->name = $_name;
         $this->numCard = $_numCard;
         $this->expirationDate = $_expirationDate;
+
+        if (date('m,Y') > date($_expirationDate)) {
+            throw new Exception("Carta di Credito Scaduta");
+        } 
     }
 
 }
